@@ -1,7 +1,7 @@
 import { useOutletContext } from "react-router-dom";
 import User from "./user/User";
-import AddUser from "./add-user/AddUser";
-import EditUser from "./edit-user/EditUser";
+import AddUser from "./user/add-user/AddUser";
+import EditUser from "./user/edit-user/EditUser";
 import MyProfile from "./profile-user/MyProfile";
 
 const MainContent = () => {

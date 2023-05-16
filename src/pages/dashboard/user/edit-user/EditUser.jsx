@@ -1,10 +1,10 @@
 import { useState } from "react";
-import DashboardFormInput from "../../../components/dashboard-form-input/DashboardFormInput";
+import DashboardFormInput from "../../../../components/dashboard-form-input/DashboardFormInput";
 import { Button } from "react-bootstrap";
 import { useOutletContext } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { editUser } from "../../../redux/alluserdata-slice/alluserdata-slice";
-import CustomModal from "../../../components/modal/CustomModal";
+import { editUser } from "../../../../redux/alluserdata-slice/alluserdata-slice";
+import CustomModal from "../../../../components/modal/CustomModal";
 
 const options = [
     { value: "transport 1", label: "Transport 1" },

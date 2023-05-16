@@ -3,6 +3,7 @@ import "../../common/Common.css";
 import "./CustomHeader.css";
 import { useDispatch, useSelector } from "react-redux";
 import { setLogout } from "../../redux/auth-slice/auth-slice";
+import PersonIcon from "@mui/icons-material/Person";
 import PropTypes from "prop-types";
 
 const CustomHeader = (props) => {
@@ -42,9 +43,11 @@ const CustomHeader = (props) => {
                     </div>
                     <div>
                         <div className="d-flex justify-content-end">
-                            <Dropdown className="">
-                                <Dropdown.Toggle className="bg-transparent text-black border-0 shadow" />
-                                <Dropdown.Menu className="mt-2">
+                            <Dropdown className="mt-3">
+                                <Dropdown.Toggle className="bg-transparent text-black border-0">
+                                    <PersonIcon />
+                                </Dropdown.Toggle>
+                                <Dropdown.Menu className="">
                                     <Dropdown.Item
                                         href=""
                                         onClick={myProfileHandler}

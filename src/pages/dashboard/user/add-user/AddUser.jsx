@@ -1,11 +1,11 @@
 import { Button } from "react-bootstrap";
 import "./AddUser.css";
-import DashboardFormInput from "../../../components/dashboard-form-input/DashboardFormInput";
+import DashboardFormInput from "../../../../components/dashboard-form-input/DashboardFormInput";
 import { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import CustomModal from "../../../components/modal/CustomModal";
-import { addUser } from "../../../redux/alluserdata-slice/alluserdata-slice";
+import CustomModal from "../../../../components/modal/CustomModal";
+import { addUser } from "../../../../redux/alluserdata-slice/alluserdata-slice";
 
 const options = [
     { value: "transport 1", label: "Transport 1" },
@@ -20,7 +20,7 @@ const options = [
     { value: "transport 10", label: "Transport 10" },
 ];
 
-const NewAddUser = () => {
+const AddUser = () => {
     const rowData = useSelector((state) => state.allUser.rowData);
     const index = rowData[rowData.length - 1].id;
 
@@ -188,4 +188,4 @@ const NewAddUser = () => {
     );
 };
 
-export default NewAddUser;
+export default AddUser;
