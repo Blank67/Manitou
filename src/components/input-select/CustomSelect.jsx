@@ -20,6 +20,8 @@ const CustomSelect = (props) => {
                 label={props.input?.label}
                 value={props.select.value}
                 onChange={props.select.onChange}
+                multiple={props.select.isMulti}
+                name={props.select.name}
             >
                 <MenuItem value="">None</MenuItem>
                 {selectItems}

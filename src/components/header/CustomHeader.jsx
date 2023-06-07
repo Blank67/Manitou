@@ -40,6 +40,9 @@ const CustomHeader = (props) => {
                         <div className="d-flex justify-content-end">
                             <b>Email</b>: {user.email}
                         </div>
+                        <div className="d-flex justify-content-end">
+                            <b>Last Login</b>: {user.email}
+                        </div>
                     </div>
                     <div>
                         <div className="d-flex justify-content-end">

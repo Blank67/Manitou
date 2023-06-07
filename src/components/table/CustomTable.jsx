@@ -21,6 +21,7 @@ const CustomTable = (props) => {
                 }}
                 pageSizeOptions={props.pageSizeOptions}
                 checkboxSelection={props.checkbox}
+                onRowSelectionModelChange={props.onRowSelectionModelChange}
                 disableColumnMenu
                 disableColumnSelector
                 disableRowSelectionOnClick
@@ -38,5 +39,6 @@ CustomTable.propTypes = {
     pageSizeOptions: PropTypes.array.isRequired,
     pageSize: PropTypes.number.isRequired,
     columnWidth: PropTypes.number,
+    onRowSelectionModelChange: PropTypes.func,
 };
 export default CustomTable;

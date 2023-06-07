@@ -1,10 +1,12 @@
+import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 
-const MyProfile = () => {
+const PersonalDetails = (props) => {
     const userData = useSelector((state) => state.user.userData);
+
     return (
-        <div>
-            <h1>My Profile</h1>
+        <div className="mt-5">
+            <h6>PersonalDetails</h6>
             <p>{userData.username}</p>
             <p>{userData.password}</p>
             <p>{userData.name}</p>
@@ -13,4 +15,6 @@ const MyProfile = () => {
     );
 };
 
-export default MyProfile;
+PersonalDetails.propTypes = {};
+
+export default PersonalDetails;

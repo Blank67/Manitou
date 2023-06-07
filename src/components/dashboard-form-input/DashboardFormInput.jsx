@@ -13,6 +13,7 @@ const DashboardFormInput = (props) => {
             variant="outlined"
             value={props.textField?.value}
             onChange={props.textField?.onChange}
+            name={props.textField?.name}
         />
     );
     if (props.inputType === "select") {
@@ -23,6 +24,8 @@ const DashboardFormInput = (props) => {
                 select={{
                     value: props.select.value,
                     onChange: props.select.onChange,
+                    isMulti: props.select.isMulti,
+                    name: props.select.name,
                 }}
                 input={{ label: props.select.label }}
             />
@@ -46,18 +49,25 @@ const DashboardFormInput = (props) => {
     }
 
     return (
-        <div className="d-flex justify-content-between align-items-center my-5">
-            <b className=" w-200px ps-5">
+        <div
+            className={`d-flex justify-content-between align-items-center ${
+                props.divClassName || ""
+            }`}
+        >
+            <span className={`w-200px ps-5 ${props.labelClassName}`}>
                 {props.label}
-                <span className="text-danger">*</span>
-            </b>
+                {props.isRequired && <span className="text-danger">*</span>}
+            </span>
             {input}
         </div>
     );
 };
 DashboardFormInput.propTypes = {
+    divClassName: PropTypes.string,
     textField: PropTypes.object,
     label: PropTypes.string.isRequired,
+    labelClassName: PropTypes.string,
+    isRequired: PropTypes.bool.isRequired,
     className: PropTypes.string,
     inputType: PropTypes.string,
     inputLabel: PropTypes.string,
